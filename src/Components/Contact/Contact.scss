@@ -1,0 +1,120 @@
+@import "../../app.scss";
+
+.contact{
+max-width: 1260px;
+height: 100%;
+margin:auto;
+display: flex;
+gap: 20px;
+align-items: center;
+padding-top: 60px;
+
+@include mobile{
+    flex-direction: column;
+    overflow-y: scroll;
+   justify-content: center;
+   align-items: center;
+
+   margin: 0px;
+    padding: 20px;
+   
+}
+.textContainer{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+@include mobile {
+    justify-content: center;
+}
+    h3{
+        font-size: 70px;
+        text-align: center;
+        @include mobile{
+            font-size: 40px;
+        }
+    }
+    .item{
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+        gap: 10px;
+       align-items: flex-start;
+       @include mobile{
+        flex-direction: row;
+        align-items: center;
+       }
+        h2{
+            font-size: 35px;
+            font-weight: 300;
+            @include mobile{
+                font-size: 20px;
+            }
+        }
+        span{
+            font-weight: 400;
+            font-size: 30px;
+            color: gray;
+            @include mobile{
+                font-size: 20px;
+            }
+        }
+    }
+}
+.formContainer{
+    flex:1;
+    overflow: hidden;
+    @include mobile{
+        flex:2;
+        justify-self: center;
+        overflow: scroll;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        // position: absolute;
+        
+        input{
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent;
+            border:0.4px solid orange;
+            color:lightgray;
+
+        }
+        textarea{
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent;
+            border:0.4px solid orange;
+            color:lightgray;
+        }
+        button{
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            background-color: orange;
+            font-weight: 400;
+        }
+        span{
+            font-size: 22px;
+            
+            font-weight: 600;
+            text-align: center;
+        }
+        .error{
+            color: red;
+        }
+        .success{
+        color:green
+        }
+    }
+}
+}

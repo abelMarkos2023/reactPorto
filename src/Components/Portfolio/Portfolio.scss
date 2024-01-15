@@ -1,0 +1,94 @@
+@import "../../app.scss";
+
+.portfolio{
+    position: relative;
+    // display: flex;
+     // flex-direction: column;
+    // gap: 10px;
+    @include mobile{
+        padding: 20px 10px;
+    }
+    .progress{
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 30px;
+        text-align: center;
+        h1{
+            font-size: 38px;
+            font-weight: bold;
+            color: orange;
+            @include mobile{
+              font-size: 40px;  
+            }
+        }
+        .progressBar{
+         height: 10px;
+         background-color: white;
+        }
+    }
+    .container{
+      
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+       .wrapper{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1260px;
+        margin: auto;
+        @include mobile{
+            //    flex-direction: column; 
+        }
+        .imageContainer{
+            flex:2;
+            height: 50%;       
+            @include mobile{
+                flex:2;
+            }
+        }
+        img{
+           height: 100%;
+           width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .textContainer{
+            flex:1; 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include mobile{
+                padding: 10px;
+                gao: 10px;
+            }
+            h1{
+                font-size: 60px;
+                @include mobile{
+                font-size: 35px;    
+                }
+            }
+            p{
+                color: gray;
+                font-size: 22px;
+                @include mobile{
+                    font-size: 18px;
+                }
+            }
+            a{
+                padding: 5px 12px;
+                display: inline-block;
+                width: fit-content;
+                border-radius: 10px;
+                background-color: orange;
+                font-size: 18px;
+                color: white;
+                font-weight: 400;
+            }
+        }
+       }
+    }
+}
